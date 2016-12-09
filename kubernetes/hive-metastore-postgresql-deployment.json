@@ -1,0 +1,31 @@
+{
+  "kind": "Deployment",
+  "apiVersion": "extensions/v1beta1",
+  "metadata": {
+    "name": "hive-metastore-postgresql",
+    "creationTimestamp": null
+  },
+  "spec": {
+    "replicas": 1,
+    "template": {
+      "metadata": {
+        "creationTimestamp": null,
+        "labels": {
+          "service": "hive-metastore-postgresql"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "name": "hive-metastore-postgresql",
+            "image": "bde2020/hive-metastore-postgresql:2.1.0",
+            "resources": {}
+          }
+        ],
+        "restartPolicy": "Always"
+      }
+    },
+    "strategy": {}
+  },
+  "status": {}
+}

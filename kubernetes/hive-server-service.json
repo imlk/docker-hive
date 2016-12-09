@@ -1,0 +1,27 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "hive-server",
+    "creationTimestamp": null,
+    "labels": {
+      "service": "hive-server"
+    }
+  },
+  "spec": {
+    "ports": [
+      {
+        "name": "10000",
+        "protocol": "TCP",
+        "port": 10000,
+        "targetPort": 10000
+      }
+    ],
+    "selector": {
+      "service": "hive-server"
+    }
+  },
+  "status": {
+    "loadBalancer": {}
+  }
+}
