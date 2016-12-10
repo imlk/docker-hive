@@ -1,0 +1,85 @@
+kind: "Service"
+apiVersion: "v1"
+metadata:
+  name: "datanode"
+  labels:
+    name: "datanode"
+spec:
+  ports:
+    -
+      name: "datanode-1"
+      port: 50020
+      targetPort: 50020
+      protocol: "TCP"
+    -
+      name: "datanode-2"
+      port: 50090
+      targetPort: 50090
+      protocol: "TCP"
+    -
+      name: "datanode-3"
+      port: 50070
+      targetPort: 50070
+      protocol: "TCP"
+    -
+      name: "datanode-4"
+      port: 50010
+      targetPort: 50010
+      protocol: "TCP"
+    -
+      name: "datanode-5"
+      port: 50075
+      targetPort: 50075
+      protocol: "TCP"
+    -
+      name: "datanode-6"
+      port: 8031
+      targetPort: 8031
+      protocol: "TCP"
+    -
+      name: "datanode-7"
+      port: 8032
+      targetPort: 8032
+      protocol: "TCP"
+    -
+      name: "datanode-8"
+      port: 8040
+      targetPort: 8040
+      protocol: "TCP"
+    -
+      name: "datanode-9"
+      port: 8042
+      targetPort: 8042
+      protocol: "TCP"
+    -
+      name: "datanode-10"
+      port: 49707
+      targetPort: 49707
+      protocol: "TCP"
+    -
+      name: "datanode-11"
+      port: 8088
+      targetPort: 8088
+      protocol: "TCP"
+    -
+      name: "datanode-12"
+      port: 8030
+      targetPort: 8030
+      protocol: "TCP"
+    -
+      name: "datanode-13"
+      port: 22
+      targetPort: 22
+      protocol: "TCP"
+    -
+      name: "datanode-14"
+      port: 9000
+      targetPort: 9000
+      protocol: "TCP"
+    -
+      name: "namenode-15"
+      port: 8020
+      targetPort: 8020
+      protocol: "TCP"
+  selector:
+    name: "datanode"
